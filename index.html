@@ -1,28 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mock Media – Instantly Mock Up Your Ads</title>
-  <meta name="description" content="Upload your creative and instantly preview it on real billboards, bus shelters, and print formats. Mock Media helps advertisers and agencies plan campaigns in seconds.">
-  <link rel="icon" href="https://mockmedia.com/favicon.ico">
+  <!-- ====== BASIC META ====== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mock Media — Instantly mock up your ads on billboards, bus shelters & print</title>
+  <meta name="description" content="Upload your creative and instantly preview it on real billboards, bus shelters, and print formats. Mock Media helps advertisers and agencies plan, present, and sell campaigns in seconds." />
+  <meta name="robots" content="index,follow" />
+  <link rel="canonical" href="https://www.mockmedia.com.au/" />
+
+  <!-- ====== FAVICON / THEME ====== -->
+  <link rel="icon" href="https://mockmedia.com/favicon.ico" />
+  <meta name="theme-color" content="#FFD84D" />
+
+  <!-- ====== SOCIAL PREVIEW ====== -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mock Media — Instantly mock up your ads" />
+  <meta property="og:description" content="See your creative on billboards, bus shelters, and print in seconds. Perfect for pitches, planning & approvals." />
+  <meta property="og:url" content="https://www.mockmedia.com.au/" />
+  <!-- Lightweight inline preview image (SVG data URI) so you don't rely on external hosting -->
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23FFD84D'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='%23111'%3EMock Media%3C/text%3E%3C/svg%3E" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Mock Media — Instantly mock up your ads" />
+  <meta name="twitter:description" content="Preview your ads in the real world before you buy. Billboards, bus shelters, print & more." />
+  <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23FFD84D'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='%23111'%3EMock Media%3C/text%3E%3C/svg%3E" />
+
+  <!-- ====== STRUCTURED DATA ====== -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"Mock Media",
+    "applicationCategory":"CreativeTool",
+    "operatingSystem":"Web",
+    "url":"https://app.mockmedia.com.au",
+    "image":"https://www.mockmedia.com.au/og-image.png",
+    "description":"Upload your creative and instantly preview it on real billboards, bus shelters, and print formats.",
+    "offers":{"@type":"Offer","priceCurrency":"AUD","price":"15","availability":"https://schema.org/InStock"},
+    "publisher":{"@type":"Organization","name":"Mock Media","url":"https://www.mockmedia.com.au"}
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {"@type":"Question","name":"What does Mock Media do?","acceptedAnswer":{"@type":"Answer","text":"It places your creative onto real-world placements like billboards, bus shelters and print so you can visualize campaigns, get approvals and sell ideas faster."}},
+      {"@type":"Question","name":"Who is it for?","acceptedAnswer":{"@type":"Answer","text":"Brands, agencies, designers and media planners who need quick, realistic mockups for presentations, planning and approvals."}},
+      {"@type":"Question","name":"Do I need design software?","acceptedAnswer":{"@type":"Answer","text":"No. Upload PNG/JPG (or video for supported templates) and Mock Media does the rest."}}
+    ]
+  }
+  </script>
+
+  <!-- ====== STYLES ====== -->
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background:#fff; color:#111; text-align:center; }
-    header { padding:80px 20px; }
-    h1 { font-size: 48px; margin-bottom: 20px; }
-    p { font-size: 18px; margin-bottom: 30px; }
-    a.button {
-      background:#FFD84D; color:#111; text-decoration:none; 
-      padding:15px 30px; border-radius:8px; font-weight:bold; font-size:18px;
+    :root{
+      --brand:#FFD84D; /* your yellow */
+      --ink:#111;
+      --muted:#666;
+      --bg:#fff;
+      --card:#f7f7f7;
+      --ring: rgba(0,0,0,.08);
+      --max: 1120px;
     }
-    a.button:hover { background:#f5c400; }
+    *{box-sizing:border-box}
+    html,body{margin:0}
+    body{font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color:var(--ink); background:var(--bg)}
+    a{color:inherit}
+    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
+
+    /* Header */
+    .topbar{position:sticky; top:0; z-index:30; backdrop-filter:saturate(1.2) blur(6px); background:rgba(255,255,255,.75); border-bottom:1px solid #eee}
+    .topbar-inner{display:flex; align-items:center; justify-content:space-between; height:60px}
+    .brand{display:flex; gap:10px; align-items:center; font-weight:900; letter-spacing:-.3px}
+    .dot{width:20px; height:20px; border-radius:6px; background:var(--brand); box-shadow:0 0 0 3px rgba(0,0,0,.05)}
+    .cta{display:inline-block; background:var(--brand); color:var(--ink); padding:12px 18px; border-radius:10px; font-weight:800; text-decoration:none; box-shadow:0 4px 10px var(--ring)}
+    .cta:hover{filter:brightness(.96)}
+    .cta.secondary{background:#111; color:#fff}
+
+    /* Hero */
+    .hero{padding:72px 0 32px}
+    .hero h1{font-size: clamp(32px, 5vw, 56px); line-height:1.04; letter-spacing:-.5px; margin:0 0 14px}
+    .sub{font-size: clamp(16px, 2.1vw, 20px); color:var(--muted); margin:0 0 26px}
+    .hero-ctas{display:flex; gap:12px; flex-wrap:wrap; justify-content:center}
+    .proof{margin-top:14px; font-size:14px; color:#333}
+
+    /* Visual strip (SVG mockups) */
+    .strip{margin:36px auto 24px; display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
+    .card{background:var(--card); border-radius:16px; padding:14px; box-shadow:0 6px 18px var(--ring)}
+    .card svg{width:100%; height:auto; display:block}
+
+    /* How it works */
+    .how{padding:40px 0}
+    .steps{display:grid; gap:18px; grid-template-columns:repeat(3,1fr)}
+    .step{background:#fff; border:1px solid #eee; border-radius:16px; padding:18px; box-shadow:0 6px 18px var(--ring)}
+    .step h3{margin:10px 0 6px; font-size:18px}
+    .step p{margin:0; color:var(--muted); font-size:15px}
+
+    /* Templates marquee */
+    .marquee-wrap{overflow:hidden; border-radius:16px; border:1px solid #eee; box-shadow:0 6px 18px var(--ring)}
+    .marquee{display:flex; gap:12px; padding:14px; animation:scroll 28s linear infinite}
+    .t{flex:0 0 260px; height:150px; border-radius:12px; background:linear-gradient(180deg,#fafafa,#f2f2f2); display:flex; align-items:center; justify-content:center; position:relative; box-shadow:inset 0 0 0 1px #e9e9e9}
+    .tag{position:absolute; bottom:8px; left:8px; background:var(--brand); color:#111; font-weight:800; font-size:12px; padding:4px 8px; border-radius:6px}
+    @keyframes scroll{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+
+    /* Social proof / CTA band */
+    .band{margin:40px 0; background:#111; color:#fff; border-radius:16px; padding:24px; display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap}
+    .band p{margin:0; opacity:.9}
+
+    /* Footer */
+    footer{padding:40px 0; color:#555; font-size:14px}
+    footer a{color:#555; text-decoration:none}
+    .links{display:flex; gap:16px; flex-wrap:wrap; justify-content:center}
+
+    /* Responsive */
+    @media (max-width: 880px){
+      .strip{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .band{flex-direction:column; text-align:center}
+      .topbar-inner{gap:10px}
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Mock Media</h1>
-    <p>Instantly visualize your ads on billboards, bus shelters & print.</p>
-    <a href="https://mockmedia.glide.page" class="button">🚀 Launch App</a>
+
+  <!-- ====== TOP BAR ====== -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <div class="dot" aria-hidden="true"></div>
+        <span>Mock Media</span>
+      </div>
+      <a class="cta" href="https://app.mockmedia.com.au">Launch the app</a>
+      <!-- If you haven't set app.mockmedia.com.au yet, temporarily use your Glide URL:
+           href="https://mockmedia.glide.page" -->
+    </div>
+  </div>
+
+  <!-- ====== HERO ====== -->
+  <header class="hero container" role="banner">
+    <h1>Instantly show your ad in the real world</h1>
+    <p class="sub">Preview your creative on <strong>billboards</strong>, <strong>bus shelters</strong> and <strong>print</strong> in seconds — perfect for pitches, approvals and media planning.</p>
+    <div class="hero-ctas">
+      <a class="cta" href="https://app.mockmedia.com.au">🚀 Launch the app</a>
+      <a class="cta secondary" href="#how">See how it works</a>
+    </div>
+    <p class="proof">No installs. Works in your browser. Optimized by Cloudinary.</p>
+
+    <!-- Visual strip: self-contained SVG "mockups" to show the idea without external images -->
+    <section class="strip" aria-label="Example mockups">
+      <div class="card" aria-hidden="true">
+        <!-- Billboard -->
+        <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <filter id="s" x="-20%" y="-20%" width="140%" height="140%">
+              <feDropShadow dx="0" dy="6" stdDeviation="6" flood-color="rgba(0,0,0,.2)"/>
+            </filter>
+          </defs>
+          <rect x="40" y="60" width="520" height="220" rx="12" fill="#1a1a1a" filter="url(#s)"/>
+          <rect x="58" y="78" width="484" height="184" rx="8" fill="#FFD84D"/>
+          <text x="300" y="175" text-anchor="middle" font-family="Arial" font-weight="900" font-size="28" fill="#111">Your Ad Here</text>
+          <rect x="160" y="284" width="280" height="8" fill="#333"/>
+        </svg>
+      </div>
+      <div class="card" aria-hidden="true">
+        <!-- Bus shelter -->
+        <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg">
+          <rect x="60" y="40" width="480" height="260" rx="14" fill="#e9e9e9"/>
+          <rect x="90" y="70" width="180" height="200" rx="8" fill="#FFD84D"/>
+          <text x="180" y="170" text-anchor="middle" font-family="Arial" font-weight="900" font-size="20" fill="#111">Poster</text>
+          <rect x="300" y="70" width="210" height="200" rx="10" fill="#f5f5f5" stroke="#ddd"/>
+          <circle cx="380" cy="170" r="52" fill="#ddd"/>
+        </svg>
+      </div>
+      <div class="card" aria-hidden="true">
+        <!-- Newspaper spread -->
+        <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg">
+          <rect x="80" y="50" width="440" height="260" rx="10" fill="#f2f2f2" stroke="#e5e5e5"/>
+          <rect x="100" y="70" width="180" height="120" fill="#FFD84D"/>
+          <text x="190" y="135" text-anchor="middle" font-family="Arial" font-weight="900" font-size="20" fill="#111">Full Page</text>
+          <g fill="#ddd">
+            <rect x="300" y="70" width="200" height="20"/><rect x="300" y="100" width="200" height="10"/>
+            <rect x="300" y="120" width="200" height="10"/><rect x="300" y="140" width="180" height="10"/>
+            <rect x="100" y="210" width="400" height="10"/><rect x="100" y="230" width="360" height="10"/>
+            <rect x="100" y="250" width="320" height="10"/>
+          </g>
+        </svg>
+      </div>
+    </section>
   </header>
+
+  <!-- ====== HOW IT WORKS ====== -->
+  <section id="how" class="how container" aria-label="How it works">
+    <div class="steps">
+      <div class="step">
+        <div aria-hidden="true">🖼️</div>
+        <h3>1) Upload your creative</h3>
+        <p>PNG/JPG (and video for supported templates). No design tools required.</p>
+      </div>
+      <div class="step">
+        <div aria-hidden="true">🪄</div>
+        <h3>2) Auto-placement & distortion</h3>
+        <p>Smart overlays map your creative onto real frames — billboards, shelters, print & more.</p>
+      </div>
+      <div class="step">
+        <div aria-hidden="true">📤</div>
+        <h3>3) Share & present</h3>
+        <p>Export or link your mockups for approvals, client decks and media plans.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== TEMPLATE PREVIEW MARQUEE ====== -->
+  <section class="container" aria-label="Template preview">
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <div class="t"><span class="tag">Billboard</span></div>
+        <div class="t"><span class="tag">Bus Shelter</span></div>
+        <div class="t"><span class="tag">Shopping Centre</span></div>
+        <div class="t"><span class="tag">Newspaper Full Page</span></div>
+        <div class="t"><span class="tag">Portrait DOOH</span></div>
+        <div class="t"><span class="tag">Landscape DOOH</span></div>
+
+        <!-- duplicate for seamless loop -->
+        <div class="t"><span class="tag">Billboard</span></div>
+        <div class="t"><span class="tag">Bus Shelter</span></div>
+        <div class="t"><span class="tag">Shopping Centre</span></div>
+        <div class="t"><span class="tag">Newspaper Full Page</span></div>
+        <div class="t"><span class="tag">Portrait DOOH</span></div>
+        <div class="t"><span class="tag">Landscape DOOH</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== SOCIAL PROOF / PRIMARY CTA ====== -->
+  <section class="container band" aria-label="Call to action">
+    <p><strong>Join marketers turning sign-off time into minutes.</strong> Try Mock Media now — no install, no fuss.</p>
+    <a class="cta" href="https://app.mockmedia.com.au">Launch the app</a>
+  </section>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="container" role="contentinfo">
+    <div class="links">
+      <a href="#how">How it works</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="mailto:hello@mockmedia.com.au">Contact</a>
+      <a href="/sitemap.xml">Sitemap</a>
+    </div>
+    <p style="text-align:center; margin-top:12px;">© <span id="y"></span> Mock Media. All rights reserved.</p>
+  </footer>
+
+  <!-- ====== SCRIPTS (tiny) ====== -->
+  <script>
+    // current year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // Soft-scroll for in-page anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+
+  <noscript>
+    <div style="text-align:center; padding:12px; background:#fff3cd; color:#664d03;">
+      JavaScript is disabled — you can still <a href="https://app.mockmedia.com.au">launch the app here</a>.
+    </div>
+  </noscript>
 </body>
 </html>
