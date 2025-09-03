@@ -5,7 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Mock Media — Instantly mock up your ads on billboards, bus shelters & print</title>
-  <meta name="description" content="Upload your creative and instantly preview it on real billboards, bus shelters, and print formats. Mock Media helps advertisers and agencies plan, present, and sell campaigns in seconds." />
+  <meta name="description" content="Upload your creative and instantly preview it on real billboards, bus shelters, retail, transit, social and print. Mock Media helps advertisers and agencies plan, present, and sell campaigns in seconds." />
   <meta name="robots" content="index,follow" />
   <link rel="canonical" href="https://www.mockmedia.com.au/" />
   <link rel="icon" href="https://mockmedia.com/favicon.ico" />
@@ -14,13 +14,13 @@
   <!-- ===== SOCIAL PREVIEW ===== -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Mock Media — Instantly mock up your ads" />
-  <meta property="og:description" content="See your creative on billboards, bus shelters, and print in seconds. Perfect for pitches, planning & approvals." />
+  <meta property="og:description" content="See your creative on billboards, bus shelters, retail, transit, social & print in seconds. Perfect for pitches, planning & approvals." />
   <meta property="og:url" content="https://www.mockmedia.com.au/" />
-  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23FFD84D'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='%23111'%3EMock Media%3C/text%3E%3C/svg%3E" />
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23FFD84D'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='%23111'%3EMock%20Media%3C/text%3E%3C/svg%3E" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mock Media — Instantly mock up your ads" />
-  <meta name="twitter:description" content="Preview your ads in the real world before you buy. Billboards, bus shelters, print & more." />
-  <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23FFD84D'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='%23111'%3EMock Media%3C/text%3E%3C/svg%3E" />
+  <meta name="twitter:description" content="Preview your ads in the real world before you buy. Billboards, bus shelters, retail, transit, social & print." />
+  <meta name="twitter:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1200' height='630'%3E%3Crect width='100%25' height='100%25' fill='%23FFD84D'/%3E%3Ctext x='50%25' y='52%25' dominant-baseline='middle' text-anchor='middle' font-size='56' font-family='Arial' fill='%23111'%3EMock%20Media%3C/text%3E%3C/svg%3E" />
 
   <!-- ===== STRUCTURED DATA ===== -->
   <script type="application/ld+json">
@@ -32,20 +32,9 @@
     "operatingSystem":"Web",
     "url":"https://app.mockmedia.com.au",
     "image":"https://www.mockmedia.com.au/og-image.png",
-    "description":"Upload your creative and instantly preview it on real billboards, bus shelters, and print formats.",
+    "description":"Upload your creative and instantly preview it on real billboards, bus shelters, retail, transit, social and print formats.",
     "offers":{"@type":"Offer","priceCurrency":"AUD","price":"15","availability":"https://schema.org/InStock"},
     "publisher":{"@type":"Organization","name":"Mock Media","url":"https://www.mockmedia.com.au"}
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What does Mock Media do?","acceptedAnswer":{"@type":"Answer","text":"It places your creative onto real-world placements like billboards, bus shelters and print so you can visualize campaigns, get approvals and sell ideas faster."}},
-      {"@type":"Question","name":"Who is it for?","acceptedAnswer":{"@type":"Answer","text":"Brands, agencies, designers and media planners who need quick, realistic mockups for presentations, planning and approvals."}},
-      {"@type":"Question","name":"Do I need design software?","acceptedAnswer":{"@type":"Answer","text":"No. Upload PNG/JPG (and video for supported templates) and Mock Media does the rest."}}
-    ]
   }
   </script>
 
@@ -56,7 +45,6 @@
       --ink:#111;
       --muted:#666;
       --bg:#fff;
-      --card:#f7f7f7;
       --ring: rgba(0,0,0,.08);
       --max:1120px;
     }
@@ -84,14 +72,13 @@
     .proof{margin-top:14px; font-size:14px; color:#333}
 
     /* Marquee tiles */
-    .strip{margin:36px auto 24px; display:grid; gap:16px; grid-template-columns:repeat(3,1fr)}
+    .marquee-wrap{overflow:hidden; border-radius:16px; border:1px solid #eee; box-shadow:0 6px 18px var(--ring); margin-top:28px}
+    .marquee{display:flex; gap:12px; padding:14px; animation:scroll 28s linear infinite; width:max-content}
+    @keyframes scroll{from{transform:translateX(0)} to{transform:translateX(-50%)}}
+
     .t{position:relative; overflow:hidden; border-radius:12px; flex:0 0 260px; height:150px; background:linear-gradient(180deg,#fafafa,#f2f2f2); box-shadow:inset 0 0 0 1px #e9e9e9}
     .t img{width:100%; height:100%; object-fit:cover; display:block}
     .tag{position:absolute; bottom:8px; left:8px; background:var(--brand); color:#111; font-weight:800; font-size:12px; padding:4px 8px; border-radius:6px}
-
-    .marquee-wrap{overflow:hidden; border-radius:16px; border:1px solid #eee; box-shadow:0 6px 18px var(--ring)}
-    .marquee{display:flex; gap:12px; padding:14px; animation:scroll 28s linear infinite; width:max-content}
-    @keyframes scroll{from{transform:translateX(0)} to{transform:translateX(-50%)}}
 
     /* How it works */
     .how{padding:40px 0}
@@ -100,23 +87,23 @@
     .step h3{margin:10px 0 6px; font-size:18px}
     .step p{margin:0; color:var(--muted); font-size:15px}
 
-    /* CTA band (fixed black box -> light card) */
+    /* Big black CTA band (centered) */
     .band{
-      margin:40px auto;
-      background:#fff;
-      color:#111;
-      border:1px solid #eee;
+      margin:44px auto;
+      background:#111;
+      color:#fff;
       border-radius:16px;
-      padding:22px;
+      padding:32px;
       display:flex;
+      flex-direction:column;
       align-items:center;
-      justify-content:space-between;
-      gap:16px;
-      flex-wrap:wrap;
-      box-shadow:0 6px 18px rgba(0,0,0,.06);
+      justify-content:center;
+      text-align:center;
+      gap:18px;
       max-width:var(--max);
+      box-shadow:0 10px 30px rgba(0,0,0,.18);
     }
-    .band p{margin:0; opacity:.95}
+    .band p{margin:0; opacity:.95; font-size:18px}
 
     /* Footer */
     footer{padding:40px 0; color:#555; font-size:14px}
@@ -125,9 +112,7 @@
 
     /* Responsive */
     @media (max-width: 880px){
-      .strip{grid-template-columns:1fr}
       .steps{grid-template-columns:1fr}
-      .band{flex-direction:column; text-align:center}
       .topbar-inner{gap:10px}
     }
   </style>
@@ -151,75 +136,87 @@
   <!-- ===== HERO ===== -->
   <header class="hero container" role="banner">
     <h1>Instantly show your ad in the real world</h1>
-    <p class="sub">Mock up your <strong>billboards</strong>, <strong>bus shelters</strong> and <strong>print</strong> in seconds — perfect for pitches, approvals and media planning.</p>
+    <p class="sub">Mock up your <strong>billboards</strong>, <strong>bus shelters</strong>, <strong>retail</strong>, <strong>transit</strong>, <strong>social</strong> and <strong>print</strong> in seconds — perfect for pitches, approvals and media planning.</p>
     <div class="hero-ctas">
       <a class="cta" href="https://app.mockmedia.com.au">🚀 Launch the app</a>
       <a class="cta secondary" href="https://app.mockmedia.com.au/dl/bcae31">View pricing & subscribe</a>
     </div>
     <p class="proof">No installs. Works in your browser. Optimized by Cloudinary.</p>
 
-    <!-- ===== VISUAL MARQUEE ===== -->
+    <!-- ===== VISUAL MARQUEE (uses your GitHub /assets) ===== -->
     <section class="container" aria-label="Template preview">
       <div class="marquee-wrap" aria-hidden="true">
         <div class="marquee">
-          <!-- Large Format (your GitHub asset) -->
-          <a class="t" href="https://app.mockmedia.com.au" aria-label="Large format billboard mockups">
-            <img src="/assets/Large%20Format%20Elizabeth%20St%20Example%201.jpg"
-                 alt="Large format billboard mockup example on Elizabeth St" loading="lazy" decoding="async" />
-            <span class="tag">Large Format</span>
-          </a>
-
-          <!-- Add more tiles as you upload assets -->
+          <!-- 7 categories -->
           <a class="t" href="https://app.mockmedia.com.au" aria-label="Bus shelter mockups">
-            <img src="/assets/bus-shelter-example.jpg" alt="Bus shelter mockup example" loading="lazy" decoding="async" />
+            <img src="/assets/Bus%20Shelter.png" alt="Bus shelter mockup example" loading="lazy" decoding="async" />
             <span class="tag">Bus Shelter</span>
           </a>
 
-          <a class="t" href="https://app.mockmedia.com.au" aria-label="Newspaper full page mockups">
-            <img src="/assets/newspaper-fullpage-example.jpg" alt="Newspaper full page mockup example" loading="lazy" decoding="async" />
-            <span class="tag">Newspaper Full Page</span>
-          </a>
-
-          <a class="t" href="https://app.mockmedia.com.au" aria-label="Portrait DOOH mockups">
-            <img src="/assets/portrait-dooh-example.jpg" alt="Portrait digital out-of-home mockup example" loading="lazy" decoding="async" />
-            <span class="tag">Portrait DOOH</span>
-          </a>
-
-          <a class="t" href="https://app.mockmedia.com.au" aria-label="Landscape DOOH mockups">
-            <img src="/assets/landscape-dooh-example.jpg" alt="Landscape digital out-of-home mockup example" loading="lazy" decoding="async" />
-            <span class="tag">Landscape DOOH</span>
-          </a>
-
-          <a class="t" href="https://app.mockmedia.com.au" aria-label="Shopping centre mockups">
-            <img src="/assets/shopping-centre-example.jpg" alt="Shopping centre screen mockup example" loading="lazy" decoding="async" />
-            <span class="tag">Shopping Centre</span>
-          </a>
-
-          <!-- duplicate same 6 again for seamless loop -->
           <a class="t" href="https://app.mockmedia.com.au" aria-label="Large format billboard mockups">
-            <img src="/assets/Large%20Format%20Elizabeth%20St%20Example%201.jpg"
-                 alt="Large format billboard mockup example on Elizabeth St" loading="lazy" decoding="async" />
+            <img src="/assets/Large%20Format%20example.png" alt="Large format billboard mockup example" loading="lazy" decoding="async" />
             <span class="tag">Large Format</span>
           </a>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Newspaper full page mockups">
+            <img src="/assets/Newspaper.png" alt="Newspaper full page mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Newspaper</span>
+          </a>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Retail posters and screens">
+            <img src="/assets/Retail.png" alt="Retail screen and poster mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Retail</span>
+          </a>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Social placements">
+            <img src="/assets/Social.png" alt="Social media mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Social</span>
+          </a>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Transit advertising">
+            <img src="/assets/Transit.png" alt="Transit advertising mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Transit</span>
+          </a>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Website takeover formats">
+            <img src="/assets/Website%20Takeover.png" alt="Website takeover mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Website Takeover</span>
+          </a>
+
+          <!-- duplicate for seamless loop -->
           <a class="t" href="https://app.mockmedia.com.au" aria-label="Bus shelter mockups">
-            <img src="/assets/bus-shelter-example.jpg" alt="Bus shelter mockup example" loading="lazy" decoding="async" />
+            <img src="/assets/Bus%20Shelter.png" alt="Bus shelter mockup example" loading="lazy" decoding="async" />
             <span class="tag">Bus Shelter</span>
           </a>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Large format billboard mockups">
+            <img src="/assets/Large%20Format%20example.png" alt="Large format billboard mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Large Format</span>
+          </a>
+
           <a class="t" href="https://app.mockmedia.com.au" aria-label="Newspaper full page mockups">
-            <img src="/assets/newspaper-fullpage-example.jpg" alt="Newspaper full page mockup example" loading="lazy" decoding="async" />
-            <span class="tag">Newspaper Full Page</span>
+            <img src="/assets/Newspaper.png" alt="Newspaper full page mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Newspaper</span>
           </a>
-          <a class="t" href="https://app.mockmedia.com.au" aria-label="Portrait DOOH mockups">
-            <img src="/assets/portrait-dooh-example.jpg" alt="Portrait digital out-of-home mockup example" loading="lazy" decoding="async" />
-            <span class="tag">Portrait DOOH</span>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Retail posters and screens">
+            <img src="/assets/Retail.png" alt="Retail screen and poster mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Retail</span>
           </a>
-          <a class="t" href="https://app.mockmedia.com.au" aria-label="Landscape DOOH mockups">
-            <img src="/assets/landscape-dooh-example.jpg" alt="Landscape digital out-of-home mockup example" loading="lazy" decoding="async" />
-            <span class="tag">Landscape DOOH</span>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Social placements">
+            <img src="/assets/Social.png" alt="Social media mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Social</span>
           </a>
-          <a class="t" href="https://app.mockmedia.com.au" aria-label="Shopping centre mockups">
-            <img src="/assets/shopping-centre-example.jpg" alt="Shopping centre screen mockup example" loading="lazy" decoding="async" />
-            <span class="tag">Shopping Centre</span>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Transit advertising">
+            <img src="/assets/Transit.png" alt="Transit advertising mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Transit</span>
+          </a>
+
+          <a class="t" href="https://app.mockmedia.com.au" aria-label="Website takeover formats">
+            <img src="/assets/Website%20Takeover.png" alt="Website takeover mockup example" loading="lazy" decoding="async" />
+            <span class="tag">Website Takeover</span>
           </a>
         </div>
       </div>
@@ -237,7 +234,7 @@
       <div class="step">
         <div aria-hidden="true">🪄</div>
         <h3>2) Auto-placement & distortion</h3>
-        <p>Smart overlays map your creative onto real frames — billboards, shelters, print & more.</p>
+        <p>Smart overlays map your creative onto real frames — billboards, shelters, retail, transit, social & print.</p>
       </div>
       <div class="step">
         <div aria-hidden="true">📤</div>
@@ -247,10 +244,10 @@
     </div>
   </section>
 
-  <!-- ===== CTA BAND (LIGHT CARD) ===== -->
+  <!-- ===== BIG BLACK CTA BAND (CENTERED) ===== -->
   <section class="container band" aria-label="Call to action">
     <p><strong>Turn sign-off time into minutes.</strong> Try Mock Media — no install, no fuss.</p>
-    <div style="display:flex; gap:10px; flex-wrap:wrap">
+    <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center">
       <a class="cta" href="https://app.mockmedia.com.au">Launch the app</a>
       <a class="cta secondary" href="https://app.mockmedia.com.au/dl/bcae31">View pricing & subscribe</a>
     </div>
