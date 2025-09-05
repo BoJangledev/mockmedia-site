@@ -20,11 +20,11 @@
   <meta property="og:title" content="Mock Media — Instantly mock up your ads" />
   <meta property="og:description" content="See your creative on billboards, bus shelters, retail, transit, social & print in seconds. Perfect for pitches, planning & approvals." />
   <meta property="og:url" content="https://www.mockmedia.com.au/" />
-  <meta property="og:image" content="https://www.mockmedia.com.au/assets/Mock%20Media%20Banner%202.png" />
+  <meta property="og:image" content="https://www.mockmedia.com.au/assets/mockmedia-banner-transparent.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mock Media — Instantly mock up your ads" />
   <meta name="twitter:description" content="Preview your ads in the real world before you buy. Billboards, bus shelters, retail, transit, social & print." />
-  <meta name="twitter:image" content="https://www.mockmedia.com.au/assets/Mock%20Media%20Banner%202.png" />
+  <meta name="twitter:image" content="https://www.mockmedia.com.au/assets/mockmedia-banner-transparent.png" />
 
   <!-- ===== STYLES ===== -->
   <style>
@@ -45,11 +45,13 @@
     .topbar-inner{display:flex; align-items:center; justify-content:space-between; height:60px}
     .brand{display:flex; align-items:center}
     .brand-badge{
-      background:#FFD84D; /* flush yellow */
+      background:var(--brand);
       border-radius:8px;
+      padding:4px 8px;
       display:flex;
       align-items:center;
       justify-content:center;
+      box-shadow:0 0 0 2px rgba(0,0,0,.05), 0 4px 10px var(--ring);
     }
     .brand img{height:32px; width:auto; display:block}
     .cta{display:inline-block; background:var(--brand); color:var(--ink); padding:12px 18px; border-radius:10px; font-weight:800; text-decoration:none; box-shadow:0 4px 10px var(--ring)}
@@ -102,7 +104,7 @@
     <div class="container topbar-inner">
       <div class="brand" aria-label="Mock Media">
         <div class="brand-badge">
-          <img src="/assets/Mock%20Media%20Banner%202.png" alt="Mock Media" />
+          <img src="/assets/mockmedia-banner-transparent.png" alt="Mock Media" />
         </div>
       </div>
       <div style="display:flex; gap:10px">
