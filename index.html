@@ -20,11 +20,11 @@
   <meta property="og:title" content="Mock Media — Instantly mock up your ads" />
   <meta property="og:description" content="See your creative on billboards, bus shelters, retail, transit, social & print in seconds. Perfect for pitches, planning & approvals." />
   <meta property="og:url" content="https://www.mockmedia.com.au/" />
-  <meta property="og:image" content="https://www.mockmedia.com.au/favicon.png" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://www.mockmedia.com.au/assets/Mock%20Media%20Banner%202.png" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Mock Media — Instantly mock up your ads" />
   <meta name="twitter:description" content="Preview your ads in the real world before you buy. Billboards, bus shelters, retail, transit, social & print." />
-  <meta name="twitter:image" content="https://www.mockmedia.com.au/favicon.png" />
+  <meta name="twitter:image" content="https://www.mockmedia.com.au/assets/Mock%20Media%20Banner%202.png" />
 
   <!-- ===== STYLES ===== -->
   <style>
@@ -43,19 +43,17 @@
     .container{max-width:var(--max); margin:0 auto; padding:0 20px}
     .topbar{position:sticky; top:0; z-index:30; backdrop-filter:saturate(1.2) blur(6px); background:rgba(255,255,255,.78); border-bottom:1px solid #eee}
     .topbar-inner{display:flex; align-items:center; justify-content:space-between; height:60px}
-    .brand{display:flex; gap:10px; align-items:center}
-    /* Removed the old .dot */
+    .brand{display:flex; align-items:center}
     .brand-badge{
-      background:var(--brand);
-      border-radius:12px;
-      padding:6px 10px;
-      box-shadow:0 0 0 3px rgba(0,0,0,.05), 0 4px 10px var(--ring);
-      display:flex; align-items:center; justify-content:center;
+      background:#FFD84D; /* flush yellow */
+      border-radius:8px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
     }
-    .brand img{height:22px; width:auto; display:block}
+    .brand img{height:32px; width:auto; display:block}
     .cta{display:inline-block; background:var(--brand); color:var(--ink); padding:12px 18px; border-radius:10px; font-weight:800; text-decoration:none; box-shadow:0 4px 10px var(--ring)}
     .cta:hover{filter:brightness(.96)}
-    .cta.secondary{background:#111; color:#fff}
     .hero{padding:76px 0 34px}
     .hero h1{font-size:clamp(32px,5vw,56px); line-height:1.04; letter-spacing:-.5px; margin:0 0 14px}
     .sub{font-size:clamp(16px,2.1vw,20px); color:var(--muted); margin:0 0 26px}
@@ -68,12 +66,11 @@
     .t img{width:100%; height:100%; object-fit:cover; display:block}
     .tag{position:absolute; bottom:8px; left:8px; background:var(--brand); color:#111; font-weight:800; font-size:12px; padding:4px 8px; border-radius:6px}
     .how{padding:40px 0}
+    .how h2{text-align:center; font-size:clamp(24px,3.6vw,36px); margin:0 0 28px}
     .steps{display:grid; gap:18px; grid-template-columns:repeat(3,1fr)}
     .step{background:#fff; border:1px solid #eee; border-radius:16px; padding:18px; box-shadow:0 6px 18px var(--ring)}
     .step h3{margin:10px 0 6px; font-size:18px}
     .step p{margin:0; color:var(--muted); font-size:15px}
-
-    /* NEW: Why section */
     .why{padding:10px 0 50px}
     .why h2{font-size:clamp(24px,3.6vw,36px); margin:6px 0 14px; text-align:center; letter-spacing:-.3px}
     .benefits{display:grid; gap:14px; grid-template-columns:repeat(3,1fr); margin-top:10px}
@@ -81,7 +78,6 @@
     .benefit b{display:block; margin-bottom:4px}
     .emoji{font-size:20px; line-height:1; margin-top:2px}
     .benefit p{margin:0; color:var(--muted); font-size:15px}
-
     .band{margin:44px auto; background:#111; color:#fff; border-radius:16px; padding:32px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; gap:18px; max-width:var(--max); box-shadow:0 10px 30px rgba(0,0,0,.18)}
     .band p{margin:0; opacity:.95; font-size:18px}
     footer{padding:40px 0; color:#555; font-size:14px}
@@ -92,11 +88,10 @@
       .steps{grid-template-columns:1fr}
       .benefits{grid-template-columns:1fr}
       .topbar-inner{gap:10px}
-      .brand img{height:18px}
+      .brand img{height:26px}
     }
-    /* Respect reduced motion: pause marquee if user prefers */
     @media (prefers-reduced-motion: reduce){
-      .marquee{animation: none}
+      .marquee{animation:none}
     }
   </style>
 </head>
@@ -112,7 +107,6 @@
       </div>
       <div style="display:flex; gap:10px">
         <a class="cta" href="https://app.mockmedia.com.au" rel="noopener noreferrer">Launch the app</a>
-        <!-- pricing button removed -->
       </div>
     </div>
   </div>
@@ -124,37 +118,37 @@
     <div class="hero-ctas">
       <a class="cta" href="https://app.mockmedia.com.au" rel="noopener noreferrer">🚀 Launch the app</a>
     </div>
-
     <p class="proof">
       No installs. Works instantly in your browser. <strong>Start free</strong> — no sign-up required.
     </p>
-
-    <!-- ===== IMAGE SCROLLER ===== -->
-    <section class="container" aria-label="Template preview">
-      <div class="marquee-wrap" aria-hidden="true">
-        <div class="marquee">
-          <div class="t"><img src="/assets/Bus%20Shelter2.png" alt="Bus Shelter" loading="lazy"><span class="tag">Bus Shelter</span></div>
-          <div class="t"><img src="/assets/Large%20Format%20example2.png" alt="Large Format" loading="lazy"><span class="tag">Large Format</span></div>
-          <div class="t"><img src="/assets/Newspaper4.png" alt="Newspaper" loading="lazy"><span class="tag">Newspaper</span></div>
-          <div class="t"><img src="/assets/Retail3.png" alt="Retail" loading="lazy"><span class="tag">Retail</span></div>
-          <div class="t"><img src="/assets/Social5.png" alt="Social" loading="lazy"><span class="tag">Social</span></div>
-          <div class="t"><img src="/assets/Transit.png" alt="Transit" loading="lazy"><span class="tag">Transit</span></div>
-          <div class="t"><img src="/assets/Website%20Takeover2.png" alt="Website Takeover" loading="lazy"><span class="tag">Website Takeover</span></div>
-          <!-- duplicate for infinite loop -->
-          <div class="t"><img src="/assets/Bus%20Shelter2.png" alt="Bus Shelter" loading="lazy"><span class="tag">Bus Shelter</span></div>
-          <div class="t"><img src="/assets/Large%20Format%20example2.png" alt="Large Format" loading="lazy"><span class="tag">Large Format</span></div>
-          <div class="t"><img src="/assets/Newspaper4.png" alt="Newspaper" loading="lazy"><span class="tag">Newspaper</span></div>
-          <div class="t"><img src="/assets/Retail3.png" alt="Retail" loading="lazy"><span class="tag">Retail</span></div>
-          <div class="t"><img src="/assets/Social5.png" alt="Social" loading="lazy"><span class="tag">Social</span></div>
-          <div class="t"><img src="/assets/Transit.png" alt="Transit" loading="lazy"><span class="tag">Transit</span></div>
-          <div class="t"><img src="/assets/Website%20Takeover2.png" alt="Website Takeover" loading="lazy"><span class="tag">Website Takeover</span></div>
-        </div>
-      </div>
-    </section>
   </header>
+
+  <!-- ===== IMAGE SCROLLER ===== -->
+  <section class="container" aria-label="Template preview">
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <div class="t"><img src="/assets/Bus%20Shelter2.png" alt="Bus Shelter" loading="lazy"><span class="tag">Bus Shelter</span></div>
+        <div class="t"><img src="/assets/Large%20Format%20example2.png" alt="Large Format" loading="lazy"><span class="tag">Large Format</span></div>
+        <div class="t"><img src="/assets/Newspaper4.png" alt="Newspaper" loading="lazy"><span class="tag">Newspaper</span></div>
+        <div class="t"><img src="/assets/Retail3.png" alt="Retail" loading="lazy"><span class="tag">Retail</span></div>
+        <div class="t"><img src="/assets/Social5.png" alt="Social" loading="lazy"><span class="tag">Social</span></div>
+        <div class="t"><img src="/assets/Transit.png" alt="Transit" loading="lazy"><span class="tag">Transit</span></div>
+        <div class="t"><img src="/assets/Website%20Takeover2.png" alt="Website Takeover" loading="lazy"><span class="tag">Website Takeover</span></div>
+        <!-- duplicate for infinite loop -->
+        <div class="t"><img src="/assets/Bus%20Shelter2.png" alt="Bus Shelter" loading="lazy"><span class="tag">Bus Shelter</span></div>
+        <div class="t"><img src="/assets/Large%20Format%20example2.png" alt="Large Format" loading="lazy"><span class="tag">Large Format</span></div>
+        <div class="t"><img src="/assets/Newspaper4.png" alt="Newspaper" loading="lazy"><span class="tag">Newspaper</span></div>
+        <div class="t"><img src="/assets/Retail3.png" alt="Retail" loading="lazy"><span class="tag">Retail</span></div>
+        <div class="t"><img src="/assets/Social5.png" alt="Social" loading="lazy"><span class="tag">Social</span></div>
+        <div class="t"><img src="/assets/Transit.png" alt="Transit" loading="lazy"><span class="tag">Transit</span></div>
+        <div class="t"><img src="/assets/Website%20Takeover2.png" alt="Website Takeover" loading="lazy"><span class="tag">Website Takeover</span></div>
+      </div>
+    </div>
+  </section>
 
   <!-- ===== HOW IT WORKS ===== -->
   <section id="how" class="how container" aria-label="How it works">
+    <h2>How it Works</h2>
     <div class="steps">
       <div class="step"><div aria-hidden="true">🖼️</div><h3>1) Upload your creative</h3><p>PNG/JPG (and video for supported templates). No design tools required.</p></div>
       <div class="step"><div aria-hidden="true">🪄</div><h3>2) Auto-placement & distortion</h3><p>Smart overlays map your creative onto real frames — billboards, shelters, retail, transit, social & print.</p></div>
@@ -166,30 +160,12 @@
   <section class="why container" aria-label="Why use Mock Media">
     <h2>Why use Mock Media?</h2>
     <div class="benefits">
-      <div class="benefit">
-        <div class="emoji" aria-hidden="true">⚡</div>
-        <div><b>Fast mockups</b><p>Create pitch-ready visuals in minutes, not days.</p></div>
-      </div>
-      <div class="benefit">
-        <div class="emoji" aria-hidden="true">🧠</div>
-        <div><b>Smart placement</b><p>Auto-distortion maps your creative to real frames accurately.</p></div>
-      </div>
-      <div class="benefit">
-        <div class="emoji" aria-hidden="true">🧰</div>
-        <div><b>No design tools</b><p>Upload PNG/JPG (plus video on supported templates) — that’s it.</p></div>
-      </div>
-      <div class="benefit">
-        <div class="emoji" aria-hidden="true">🗺️</div>
-        <div><b>8 media types</b><p>Billboards, bus shelters, retail, transit, social, print and more.</p></div>
-      </div>
-      <div class="benefit">
-        <div class="emoji" aria-hidden="true">🆓</div>
-        <div><b>Start free</b><p>No sign-up required to try it out.</p></div>
-      </div>
-      <div class="benefit">
-        <div class="emoji" aria-hidden="true">🔁</div>
-        <div><b>New templates regularly</b><p>Fresh locations and formats keep your decks current.</p></div>
-      </div>
+      <div class="benefit"><div class="emoji">⚡</div><div><b>Fast mockups</b><p>Create pitch-ready visuals in minutes, not days.</p></div></div>
+      <div class="benefit"><div class="emoji">🧠</div><div><b>Smart placement</b><p>Auto-distortion maps your creative to real frames accurately.</p></div></div>
+      <div class="benefit"><div class="emoji">🧰</div><div><b>No design tools</b><p>Upload PNG/JPG (plus video on supported templates) — that’s it.</p></div></div>
+      <div class="benefit"><div class="emoji">🗺️</div><div><b>8 media types</b><p>Billboards, bus shelters, retail, transit, social, print and more.</p></div></div>
+      <div class="benefit"><div class="emoji">🆓</div><div><b>Start free</b><p>No sign-up required to try it out.</p></div></div>
+      <div class="benefit"><div class="emoji">🔁</div><div><b>New templates regularly</b><p>Fresh locations and formats keep your decks current.</p></div></div>
     </div>
   </section>
 
@@ -206,13 +182,9 @@
     <div class="links">
       <a href="mailto:support@mockmedia.com.au">Contact</a>
       <span aria-hidden="true">•</span>
-      <a href="https://www.linkedin.com/company/mockmedia/" target="_blank" rel="noopener noreferrer" aria-label="Mock Media on LinkedIn">
-        <span aria-hidden="true">in</span> <span>LinkedIn</span>
-      </a>
+      <a href="https://www.linkedin.com/company/mockmedia/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <span aria-hidden="true">•</span>
-      <a href="https://www.instagram.com/mockmediaapp?utm_source=qr&igsh=MXZlZ3cxN2Y0d3dmbA==" target="_blank" rel="noopener noreferrer" aria-label="Mock Media on Instagram">
-        <span aria-hidden="true">◎</span> <span>Instagram</span>
-      </a>
+      <a href="https://www.instagram.com/mockmediaapp?utm_source=qr&igsh=MXZlZ3cxN2Y0d3dmbA==" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
     <p style="text-align:center; margin-top:12px;">© <span id="y"></span> Mock Media. All rights reserved.</p>
   </footer>
@@ -222,4 +194,3 @@
   </script>
 </body>
 </html>
-
