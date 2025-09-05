@@ -45,6 +45,7 @@
     .topbar-inner{display:flex; align-items:center; justify-content:space-between; height:60px}
     .brand{display:flex; gap:10px; align-items:center; font-weight:900; letter-spacing:-.3px}
     .dot{width:20px; height:20px; border-radius:6px; background:var(--brand); box-shadow:0 0 0 3px rgba(0,0,0,.05)}
+    .brand img{height:22px; width:auto; display:block}
     .cta{display:inline-block; background:var(--brand); color:var(--ink); padding:12px 18px; border-radius:10px; font-weight:800; text-decoration:none; box-shadow:0 4px 10px var(--ring)}
     .cta:hover{filter:brightness(.96)}
     .cta.secondary{background:#111; color:#fff}
@@ -68,10 +69,16 @@
     .band p{margin:0; opacity:.95; font-size:18px}
     footer{padding:40px 0; color:#555; font-size:14px}
     footer a{color:#555; text-decoration:none}
-    .links{display:flex; gap:16px; flex-wrap:wrap; justify-content:center}
+    .links{display:flex; gap:16px; flex-wrap:wrap; justify-content:center; align-items:center}
+    .links a{display:flex; gap:8px; align-items:center}
     @media (max-width: 880px){
       .steps{grid-template-columns:1fr}
       .topbar-inner{gap:10px}
+      .brand img{height:18px}
+    }
+    /* Respect reduced motion: pause marquee if user prefers */
+    @media (prefers-reduced-motion: reduce){
+      .marquee{animation: none}
     }
   </style>
 </head>
@@ -80,13 +87,14 @@
   <!-- ===== TOP BAR ===== -->
   <div class="topbar">
     <div class="container topbar-inner">
-      <div class="brand">
+      <div class="brand" aria-label="Mock Media">
         <div class="dot" aria-hidden="true"></div>
-        <span>Mock Media</span>
+        <!-- Use banner logo for brand name -->
+        <img src="/assets/Mock%20Media%20Banner%202.png" alt="Mock Media" />
       </div>
       <div style="display:flex; gap:10px">
-        <a class="cta" href="https://app.mockmedia.com.au">Launch the app</a>
-        <a class="cta secondary" href="https://app.mockmedia.com.au/dl/bcae31">View pricing & subscribe</a>
+        <a class="cta" href="https://app.mockmedia.com.au" rel="noopener noreferrer">Launch the app</a>
+        <!-- removed pricing button -->
       </div>
     </div>
   </div>
@@ -96,8 +104,8 @@
     <h1>Instantly show your ad in the real world</h1>
     <p class="sub">Mock up your <strong>billboards</strong>, <strong>bus shelters</strong>, <strong>retail</strong>, <strong>transit</strong>, <strong>social</strong> and <strong>print</strong> in seconds — perfect for pitches, approvals and media planning.</p>
     <div class="hero-ctas">
-      <a class="cta" href="https://app.mockmedia.com.au">🚀 Launch the app</a>
-      <a class="cta secondary" href="https://app.mockmedia.com.au/dl/bcae31">View pricing & subscribe</a>
+      <a class="cta" href="https://app.mockmedia.com.au" rel="noopener noreferrer">🚀 Launch the app</a>
+      <!-- removed pricing button -->
     </div>
 
     <p class="proof">
@@ -108,21 +116,21 @@
     <section class="container" aria-label="Template preview">
       <div class="marquee-wrap" aria-hidden="true">
         <div class="marquee">
-          <a class="t"><img src="/assets/Bus%20Shelter2.png" alt="Bus Shelter"><span class="tag">Bus Shelter</span></a>
-          <a class="t"><img src="/assets/Large%20Format%20example2.png" alt="Large Format"><span class="tag">Large Format</span></a>
-          <a class="t"><img src="/assets/Newspaper4.png" alt="Newspaper"><span class="tag">Newspaper</span></a>
-          <a class="t"><img src="/assets/Retail3.png" alt="Retail"><span class="tag">Retail</span></a>
-          <a class="t"><img src="/assets/Social5.png" alt="Social"><span class="tag">Social</span></a>
-          <a class="t"><img src="/assets/Transit.png" alt="Transit"><span class="tag">Transit</span></a>
-          <a class="t"><img src="/assets/Website%20Takeover2.png" alt="Website Takeover"><span class="tag">Website Takeover</span></a>
+          <div class="t"><img src="/assets/Bus%20Shelter2.png" alt="Bus Shelter" loading="lazy"><span class="tag">Bus Shelter</span></div>
+          <div class="t"><img src="/assets/Large%20Format%20example2.png" alt="Large Format" loading="lazy"><span class="tag">Large Format</span></div>
+          <div class="t"><img src="/assets/Newspaper4.png" alt="Newspaper" loading="lazy"><span class="tag">Newspaper</span></div>
+          <div class="t"><img src="/assets/Retail3.png" alt="Retail" loading="lazy"><span class="tag">Retail</span></div>
+          <div class="t"><img src="/assets/Social5.png" alt="Social" loading="lazy"><span class="tag">Social</span></div>
+          <div class="t"><img src="/assets/Transit.png" alt="Transit" loading="lazy"><span class="tag">Transit</span></div>
+          <div class="t"><img src="/assets/Website%20Takeover2.png" alt="Website Takeover" loading="lazy"><span class="tag">Website Takeover</span></div>
           <!-- duplicate for infinite loop -->
-          <a class="t"><img src="/assets/Bus%20Shelter2.png" alt="Bus Shelter"><span class="tag">Bus Shelter</span></a>
-          <a class="t"><img src="/assets/Large%20Format%20example2.png" alt="Large Format"><span class="tag">Large Format</span></a>
-          <a class="t"><img src="/assets/Newspaper4.png" alt="Newspaper"><span class="tag">Newspaper</span></a>
-          <a class="t"><img src="/assets/Retail3.png" alt="Retail"><span class="tag">Retail</span></a>
-          <a class="t"><img src="/assets/Social5.png" alt="Social"><span class="tag">Social</span></a>
-          <a class="t"><img src="/assets/Transit.png" alt="Transit"><span class="tag">Transit</span></a>
-          <a class="t"><img src="/assets/Website%20Takeover2.png" alt="Website Takeover"><span class="tag">Website Takeover</span></a>
+          <div class="t"><img src="/assets/Bus%20Shelter2.png" alt="Bus Shelter" loading="lazy"><span class="tag">Bus Shelter</span></div>
+          <div class="t"><img src="/assets/Large%20Format%20example2.png" alt="Large Format" loading="lazy"><span class="tag">Large Format</span></div>
+          <div class="t"><img src="/assets/Newspaper4.png" alt="Newspaper" loading="lazy"><span class="tag">Newspaper</span></div>
+          <div class="t"><img src="/assets/Retail3.png" alt="Retail" loading="lazy"><span class="tag">Retail</span></div>
+          <div class="t"><img src="/assets/Social5.png" alt="Social" loading="lazy"><span class="tag">Social</span></div>
+          <div class="t"><img src="/assets/Transit.png" alt="Transit" loading="lazy"><span class="tag">Transit</span></div>
+          <div class="t"><img src="/assets/Website%20Takeover2.png" alt="Website Takeover" loading="lazy"><span class="tag">Website Takeover</span></div>
         </div>
       </div>
     </section>
@@ -141,8 +149,8 @@
   <section class="container band" aria-label="Call to action">
     <p><strong>Turn your sign-off time into minutes.</strong> Try Mock Media — no install, no fuss.</p>
     <div style="display:flex; gap:10px; flex-wrap:wrap; justify-content:center">
-      <a class="cta" href="https://app.mockmedia.com.au">Launch the app</a>
-      <a class="cta secondary" href="https://app.mockmedia.com.au/dl/bcae31">View pricing & subscribe</a>
+      <a class="cta" href="https://app.mockmedia.com.au" rel="noopener noreferrer">Launch the app</a>
+      <!-- removed pricing button -->
     </div>
   </section>
 
@@ -150,6 +158,15 @@
   <footer class="container" role="contentinfo">
     <div class="links">
       <a href="mailto:support@mockmedia.com.au">Contact</a>
+      <span aria-hidden="true">•</span>
+      <a href="https://www.linkedin.com/company/mockmedia/" target="_blank" rel="noopener noreferrer" aria-label="Mock Media on LinkedIn">
+        <!-- simple icon replacement -->
+        <span aria-hidden="true">in</span> <span>LinkedIn</span>
+      </a>
+      <span aria-hidden="true">•</span>
+      <a href="https://www.instagram.com/mockmediaapp?utm_source=qr&igsh=MXZlZ3cxN2Y0d3dmbA==" target="_blank" rel="noopener noreferrer" aria-label="Mock Media on Instagram">
+        <span aria-hidden="true">◎</span> <span>Instagram</span>
+      </a>
     </div>
     <p style="text-align:center; margin-top:12px;">© <span id="y"></span> Mock Media. All rights reserved.</p>
   </footer>
